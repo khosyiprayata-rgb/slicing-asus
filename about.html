@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - ASUS Indonesia</title>
+    <meta
+      name="description"
+      content="Pelajari lebih lanjut tentang ASUS, perusahaan teknologi terkemuka dunia."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "asus-red": "#ff0000",
+              "asus-dark": "#0a0a0a",
+              "asus-darker": "#050505",
+              "asus-gray": "#1a1a1a",
+            },
+            fontFamily: {
+              display: ["Orbitron", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-display {
+        font-family: "Orbitron", sans-serif;
+      }
+      .btn-glow {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+      .btn-glow:hover {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ff0000;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #ff0000, #ff4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .timeline-line {
+        background: linear-gradient(180deg, #ff0000, transparent);
+      }
+    </style>
+  </head>
+  <body class="bg-asus-dark text-white min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-asus-darker/95 backdrop-blur-md border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="font-display text-2xl font-bold tracking-wider"
+          >
+            <span class="text-asus-red">ASUS</span>
+          </a>
+
+          <!-- Menu Desktop -->
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="index.html"
+              class="text-white font-medium hover:text-asus-red transition"
+              >Beranda</a
+            >
+            <a
+              href="products.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Produk</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Tentang</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Kontak</a
+            >
+          </div>
+
+          <!-- Tombol Hamburger / Mobile -->
+          <button id="menu-btn" class="md:hidden text-white">
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col mt-4 md:hidden space-y-3 border-t border-white/10 pt-4"
+        >
+          <a
+            href="index.html"
+            class="text-white font-medium block hover:text-asus-red transition"
+            >Beranda</a
+          >
+          <a
+            href="products.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Produk</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Tentang</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-32 pb-20 bg-gradient-to-b from-asus-darker via-asus-dark to-asus-dark"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <p
+            class="text-asus-red font-display text-sm tracking-widest uppercase mb-4"
+          >
+            Tentang Kami
+          </p>
+          <h1
+            class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+          >
+            In Search of <span class="text-gradient">Incredible</span>
+          </h1>
+          <p class="text-gray-400 text-lg">
+            Sejak 1989, ASUS telah menjadi pelopor inovasi teknologi,
+            menciptakan produk-produk yang mengubah cara dunia bekerja dan
+            bermain.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20 bg-asus-dark">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800"
+              alt="ASUS Office"
+              class="rounded-2xl shadow-2xl"
+            />
+          </div>
+          <div class="space-y-6">
+            <h2 class="font-display text-3xl md:text-4xl font-bold">
+              Siapa <span class="text-gradient">ASUS</span>?
+            </h2>
+            <p class="text-gray-400">
+              ASUS adalah perusahaan teknologi multinasional Taiwan yang
+              berkantor pusat di Distrik Beitou, Taipei, Taiwan. Perusahaan ini
+              didirikan oleh T.H. Tung, Ted Hsu, Wayne Hsieh, dan M.T. Liao pada
+              2 April 1989.
+            </p>
+            <p class="text-gray-400">
+              ASUS adalah salah satu produsen motherboard, kartu grafis, dan
+              laptop gaming terbesar di dunia. Dengan filosofi "In Search of
+              Incredible", kami terus mendorong batas inovasi untuk memberikan
+              pengalaman terbaik bagi pengguna di seluruh dunia.
+            </p>
+            <div class="grid grid-cols-3 gap-6 pt-4">
+              <div class="text-center">
+                <div class="font-display text-3xl font-bold text-asus-red">
+                  35+
+                </div>
+                <div class="text-gray-400 text-sm">Tahun Berpengalaman</div>
+              </div>
+              <div class="text-center">
+                <div class="font-display text-3xl font-bold text-asus-red">
+                  50+
+                </div>
+                <div class="text-gray-400 text-sm">Negara</div>
+              </div>
+              <div class="text-center">
+                <div class="font-display text-3xl font-bold text-asus-red">
+                  17K+
+                </div>
+                <div class="text-gray-400 text-sm">Karyawan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-asus-darker">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+            Nilai-Nilai <span class="text-gradient">Kami</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Prinsip yang memandu setiap inovasi dan keputusan kami
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Value 1 -->
+          <div
+            class="card-hover bg-asus-gray/50 border border-white/10 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-asus-red/20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-asus-red"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3">Inovasi</h3>
+            <p class="text-gray-400 text-sm">
+              Terus berinovasi untuk menciptakan produk yang revolusioner
+            </p>
+          </div>
+          <!-- Value 2 -->
+          <div
+            class="card-hover bg-asus-gray/50 border border-white/10 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-asus-red/20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-asus-red"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3">Kualitas</h3>
+            <p class="text-gray-400 text-sm">
+              Standar tertinggi dalam setiap produk yang kami hasilkan
+            </p>
+          </div>
+          <!-- Value 3 -->
+          <div
+            class="card-hover bg-asus-gray/50 border border-white/10 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-asus-red/20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-asus-red"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3">Komunitas</h3>
+            <p class="text-gray-400 text-sm">
+              Membangun komunitas gamer dan kreator yang solid
+            </p>
+          </div>
+          <!-- Value 4 -->
+          <div
+            class="card-hover bg-asus-gray/50 border border-white/10 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-asus-red/20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-asus-red"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3">Keberlanjutan</h3>
+            <p class="text-gray-400 text-sm">
+              Berkomitmen pada lingkungan dan keberlanjutan
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-asus-dark">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+            Perjalanan <span class="text-gradient">Kami</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Milestone penting dalam sejarah ASUS
+          </p>
+        </div>
+        <div class="space-y-8">
+          <!-- Timeline Item 1 -->
+          <div class="flex gap-8 items-start">
+            <div class="hidden md:flex flex-col items-center">
+              <div class="w-4 h-4 bg-asus-red rounded-full"></div>
+              <div
+                class="w-0.5 h-24 bg-gradient-to-b from-asus-red to-transparent"
+              ></div>
+            </div>
+            <div
+              class="flex-1 bg-asus-gray/30 border border-white/10 rounded-xl p-6"
+            >
+              <span class="text-asus-red font-display font-bold">1989</span>
+              <h3 class="font-display text-xl font-bold mt-2 mb-2">
+                Pendirian ASUS
+              </h3>
+              <p class="text-gray-400">
+                ASUS didirikan di Taiwan oleh empat insinyur komputer dengan
+                visi membuat motherboard terbaik.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="flex gap-8 items-start">
+            <div class="hidden md:flex flex-col items-center">
+              <div class="w-4 h-4 bg-asus-red rounded-full"></div>
+              <div
+                class="w-0.5 h-24 bg-gradient-to-b from-asus-red to-transparent"
+              ></div>
+            </div>
+            <div
+              class="flex-1 bg-asus-gray/30 border border-white/10 rounded-xl p-6"
+            >
+              <span class="text-asus-red font-display font-bold">2006</span>
+              <h3 class="font-display text-xl font-bold mt-2 mb-2">
+                Lahirnya ROG
+              </h3>
+              <p class="text-gray-400">
+                Republic of Gamers (ROG) diluncurkan, membawa gaming ke level
+                baru dengan hardware premium.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="flex gap-8 items-start">
+            <div class="hidden md:flex flex-col items-center">
+              <div class="w-4 h-4 bg-asus-red rounded-full"></div>
+              <div
+                class="w-0.5 h-24 bg-gradient-to-b from-asus-red to-transparent"
+              ></div>
+            </div>
+            <div
+              class="flex-1 bg-asus-gray/30 border border-white/10 rounded-xl p-6"
+            >
+              <span class="text-asus-red font-display font-bold">2018</span>
+              <h3 class="font-display text-xl font-bold mt-2 mb-2">
+                ROG Phone Pertama
+              </h3>
+              <p class="text-gray-400">
+                ASUS memasuki pasar smartphone gaming dengan ROG Phone yang
+                revolusioner.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline Item 4 -->
+          <div class="flex gap-8 items-start">
+            <div class="hidden md:flex flex-col items-center">
+              <div class="w-4 h-4 bg-asus-red rounded-full"></div>
+            </div>
+            <div
+              class="flex-1 bg-asus-gray/30 border border-white/10 rounded-xl p-6"
+            >
+              <span class="text-asus-red font-display font-bold">2024</span>
+              <h3 class="font-display text-xl font-bold mt-2 mb-2">
+                Era AI & OLED
+              </h3>
+              <p class="text-gray-400">
+                ASUS memimpin inovasi dengan teknologi AI dan layar OLED di
+                seluruh lini produk.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-asus-darker via-asus-red/10 to-asus-darker"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+          Bergabung Dengan <span class="text-gradient">Tim Kami</span>
+        </h2>
+        <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+          Tertarik menjadi bagian dari inovasi teknologi terdepan? Jelajahi
+          peluang karir di ASUS.
+        </p>
+        <a
+          href="contact.html"
+          class="btn-glow bg-asus-red text-white font-display uppercase tracking-wider px-10 py-4 rounded inline-block hover:bg-red-600 transition-colors"
+        >
+          Hubungi Kami
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-asus-darker border-t border-white/10 py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <a
+              href="index.html"
+              class="font-display text-2xl font-bold tracking-wider"
+            >
+              <span class="text-asus-red">ASUS</span>
+            </a>
+            <p class="text-gray-400 mt-4 text-sm">
+              In Search of Incredible. Inovasi teknologi untuk kehidupan yang
+              lebih baik.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Produk</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Laptop Gaming</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Desktop PC</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Monitor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Aksesoris</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Perusahaan</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Hubungi Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-asus-red transition-colors"
+                  >Karir</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-asus-red transition-colors"
+                  >Berita</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Ikuti Kami</h4>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm"
+        >
+          <p>
+            &copy; 2024 ASUS. All rights reserved. | Tugas Sekolah - HTML & CSS
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

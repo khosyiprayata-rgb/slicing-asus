@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk - ASUS Indonesia</title>
+    <meta
+      name="description"
+      content="Jelajahi koleksi lengkap laptop gaming, desktop, dan monitor ASUS ROG."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "asus-red": "#ff0000",
+              "asus-dark": "#0a0a0a",
+              "asus-darker": "#050505",
+              "asus-gray": "#1a1a1a",
+            },
+            fontFamily: {
+              display: ["Orbitron", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-display {
+        font-family: "Orbitron", sans-serif;
+      }
+      .btn-glow {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+      .btn-glow:hover {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ff0000;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #ff0000, #ff4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .filter-btn {
+        transition: all 0.3s ease;
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #ff0000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-asus-dark text-white min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-asus-darker/95 backdrop-blur-md border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="font-display text-2xl font-bold tracking-wider"
+          >
+            <span class="text-asus-red">ASUS</span>
+          </a>
+
+          <!-- Menu Desktop -->
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="index.html"
+              class="text-white font-medium hover:text-asus-red transition"
+              >Beranda</a
+            >
+            <a
+              href="products.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Produk</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Tentang</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-300 hover:text-asus-red transition"
+              >Kontak</a
+            >
+          </div>
+
+          <!-- Tombol Hamburger / Mobile -->
+          <button id="menu-btn" class="md:hidden text-white">
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col mt-4 md:hidden space-y-3 border-t border-white/10 pt-4"
+        >
+          <a
+            href="index.html"
+            class="text-white font-medium block hover:text-asus-red transition"
+            >Beranda</a
+          >
+          <a
+            href="products.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Produk</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Tentang</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-300 hover:text-asus-red block transition"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="pt-24 pb-12 bg-gradient-to-b from-asus-darker to-asus-dark">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+          Koleksi <span class="text-gradient">Produk</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Temukan perangkat gaming dan produktivitas terbaik dari ASUS. Dari
+          laptop gaming hingga monitor profesional.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-asus-dark border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-4">
+          <button
+            class="filter-btn active bg-asus-red text-white font-display text-sm uppercase tracking-wider px-6 py-3 rounded border border-white/10"
+          >
+            Semua
+          </button>
+          <button
+            class="filter-btn bg-asus-gray text-gray-400 font-display text-sm uppercase tracking-wider px-6 py-3 rounded border border-white/10"
+          >
+            Laptop
+          </button>
+          <button
+            class="filter-btn bg-asus-gray text-gray-400 font-display text-sm uppercase tracking-wider px-6 py-3 rounded border border-white/10"
+          >
+            Desktop
+          </button>
+          <button
+            class="filter-btn bg-asus-gray text-gray-400 font-display text-sm uppercase tracking-wider px-6 py-3 rounded border border-white/10"
+          >
+            Monitor
+          </button>
+          <button
+            class="filter-btn bg-asus-gray text-gray-400 font-display text-sm uppercase tracking-wider px-6 py-3 rounded border border-white/10"
+          >
+            Aksesoris
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16 bg-asus-dark">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50 relative">
+              <img
+                src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600"
+                alt="ROG Zephyrus"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 bg-asus-red text-white text-xs font-display uppercase tracking-wider px-3 py-1 rounded"
+                >New</span
+              >
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Gaming Laptop</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Zephyrus G16
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Intel Core Ultra 9, NVIDIA RTX 4090, 32GB DDR5, 2TB SSD
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 45.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600"
+                alt="ROG Strix"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Gaming Laptop</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Strix SCAR 18
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Intel Core i9-14900HX, NVIDIA RTX 4080, 64GB DDR5, 2TB SSD
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 52.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50 relative">
+              <img
+                src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?w=600"
+                alt="ROG GT35"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 bg-yellow-500 text-black text-xs font-display uppercase tracking-wider px-3 py-1 rounded"
+                >Best Seller</span
+              >
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Gaming Desktop</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Strix GT35
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Intel Core i9-14900K, NVIDIA RTX 4080, 64GB DDR5, 4TB SSD
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 65.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"
+                alt="ROG Swift"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Gaming Monitor</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Swift OLED PG32
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                32" 4K OLED, 240Hz, 0.03ms Response Time, G-SYNC
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 28.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600"
+                alt="ProArt Display"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Professional Monitor</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ProArt Display PA32UCG
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                32" 4K HDR, Mini LED, 120Hz, Dolby Vision, Thunderbolt 4
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 42.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50 relative">
+              <img
+                src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600"
+                alt="Zenbook Pro"
+                class="w-full h-full object-cover"
+              />
+              <span
+                class="absolute top-4 left-4 bg-asus-red text-white text-xs font-display uppercase tracking-wider px-3 py-1 rounded"
+                >New</span
+              >
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Ultrabook</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                Zenbook Pro 16X OLED
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Intel Core i9, NVIDIA RTX 4070, 32GB RAM, 4K OLED Touch
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 38.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+                alt="ROG Phone"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Gaming Phone</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Phone 8 Pro
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Snapdragon 8 Gen 3, 24GB RAM, 1TB Storage, 165Hz AMOLED
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 18.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
+                alt="ROG Keyboard"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Aksesoris</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Azoth Extreme
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Wireless Mechanical Keyboard, NX Switches, OLED Display
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 6.999.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div
+            class="card-hover bg-gradient-to-b from-asus-gray to-asus-darker border border-white/10 rounded-xl overflow-hidden"
+          >
+            <div class="aspect-video bg-asus-gray/50">
+              <img
+                src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600"
+                alt="ROG Headset"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <span
+                class="text-asus-red text-xs font-display uppercase tracking-wider"
+                >Aksesoris</span
+              >
+              <h3 class="font-display text-xl font-bold mt-2 mb-3">
+                ROG Delta S Wireless
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Wireless Gaming Headset, AI Noise Canceling, 50mm Drivers
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="font-display text-asus-red font-bold text-lg"
+                  >Rp 3.499.000</span
+                >
+                <button
+                  class="btn-glow bg-asus-red text-white font-display text-xs uppercase tracking-wider px-4 py-2 rounded"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center gap-2 mt-12">
+          <button class="w-10 h-10 bg-asus-red text-white rounded font-display">
+            1
+          </button>
+          <button
+            class="w-10 h-10 bg-asus-gray text-gray-400 rounded font-display hover:bg-asus-red hover:text-white transition-colors"
+          >
+            2
+          </button>
+          <button
+            class="w-10 h-10 bg-asus-gray text-gray-400 rounded font-display hover:bg-asus-red hover:text-white transition-colors"
+          >
+            3
+          </button>
+          <button
+            class="w-10 h-10 bg-asus-gray text-gray-400 rounded font-display hover:bg-asus-red hover:text-white transition-colors"
+          >
+            <svg
+              class="w-5 h-5 mx-auto"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-asus-darker border-t border-white/10 py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <a
+              href="index.html"
+              class="font-display text-2xl font-bold tracking-wider"
+            >
+              <span class="text-asus-red">ASUS</span>
+            </a>
+            <p class="text-gray-400 mt-4 text-sm">
+              In Search of Incredible. Inovasi teknologi untuk kehidupan yang
+              lebih baik.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Produk</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Laptop Gaming</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Desktop PC</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Monitor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Aksesoris</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Perusahaan</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-asus-red transition-colors"
+                  >Hubungi Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-asus-red transition-colors"
+                  >Karir</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-asus-red transition-colors"
+                  >Berita</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold mb-4">Ikuti Kami</h4>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-asus-gray rounded-full flex items-center justify-center hover:bg-asus-red transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/10 pt-8 text-center text-gray-400 text-sm"
+        >
+          <p>
+            &copy; 2024 ASUS. All rights reserved. | Tugas Sekolah - HTML & CSS
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
